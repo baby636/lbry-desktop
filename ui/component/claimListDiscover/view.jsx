@@ -61,6 +61,8 @@ type Props = {
   hideFilters?: boolean,
   maxPages?: number,
   forceShowReposts?: boolean,
+  languageSetting: string,
+  searchInLanguage: boolean,
 };
 
 function ClaimListDiscover(props: Props) {
@@ -106,6 +108,8 @@ function ClaimListDiscover(props: Props) {
     claimIds,
     maxPages,
     forceShowReposts = false,
+    languageSetting,
+    searchInLanguage,
   } = props;
   const didNavigateForward = history.action === 'PUSH';
   const { search } = location;
@@ -121,6 +125,20 @@ function ClaimListDiscover(props: Props) {
     (urlParams.get(CS.TAGS_KEY) !== null && urlParams.get(CS.TAGS_KEY)) ||
     (defaultTags && getParamFromTags(defaultTags));
   const freshnessParam = freshness || urlParams.get(CS.FRESH_KEY) || defaultFreshness;
+
+  const langParam = urlParams.get(CS.LANGUAGE_KEY) || null;
+  const languageParam = searchInLanguage
+    ? langParam === null
+      ? languageSetting
+      : langParam === 'any'
+      ? null
+      : langParam
+    : langParam === null
+    ? null
+    : langParam === 'any'
+    ? null
+    : langParam;
+
   const contentTypeParam = urlParams.get(CS.CONTENT_KEY);
   const claimTypeParam =
     claimType || (CS.CLAIM_TYPES.includes(contentTypeParam) && contentTypeParam) || defaultClaimType || null;
@@ -159,6 +177,7 @@ function ClaimListDiscover(props: Props) {
     page: number,
     no_totals: boolean,
     any_tags?: Array<string>,
+    any_languages?: Array<string>,
     not_tags: Array<string>,
     channel_ids?: Array<string>,
     claim_ids?: Array<string>,
@@ -272,6 +291,12 @@ function ClaimListDiscover(props: Props) {
       } else {
         options.claim_type = [claimTypeParam];
       }
+    }
+  }
+
+  if (languageParam) {
+    if (languageParam !== CS.LANGUAGES_ALL) {
+      options.any_languages = [languageParam];
     }
   }
 
