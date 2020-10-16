@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { FormField } from 'component/common/form';
 import Spinner from 'component/spinner';
-import SUPPORTED_LANGUAGES from '../../constants/supported_languages';
+import SUPPORTED_LANGUAGES from 'constants/supported_languages';
 
 type Props = {
   language: string,

@@ -1488,6 +1488,12 @@
   "lbry.com": "lbry.com",
   "lbry.tech": "lbry.tech",
   "GitHub": "GitHub",
+  "Post": "Post",
+  "Primary Language": "Primary Language",
+  "Your main content language": "Your main content language",
+  "None selected": "None selected",
+  "Secondary Language": "Secondary Language",
+  "Your other content language": "Your other content language",
   "This link leads to an external website.": "This link leads to an external website.",
   "--end--": "--end--"
 }

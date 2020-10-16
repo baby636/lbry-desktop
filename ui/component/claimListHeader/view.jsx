@@ -11,7 +11,7 @@ import { SETTINGS } from 'lbry-redux';
 import { FormField } from 'component/common/form';
 import Button from 'component/button';
 import { toCapitalCase } from 'util/string';
-import SUPPORTED_LANGUAGES from '../../constants/supported_languages';
+import SUPPORTED_LANGUAGES from 'constants/supported_languages';
 console.log('SUP', SUPPORTED_LANGUAGES);
 
 type Props = {
