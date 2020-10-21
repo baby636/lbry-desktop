@@ -258,12 +258,12 @@ $thumbnailWidthSmall: 0rem;
     margin-right: var(--spacing-m);
   }
 
-  .icon {
-    margin-right: var(--spacing-xxs);
+  .comment__reaction-count {
+    // margin-left: var(--spacing-xxs);
   }
 
   .button__label {
-    margin-left: 0;
+    margin-left: var(--spacing-xs);
   }
 }
 

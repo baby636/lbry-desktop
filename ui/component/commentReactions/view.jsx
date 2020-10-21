@@ -15,7 +15,7 @@ type Props = {
 };
 
 export default function CommentReactions(props: Props) {
-  const { myReacts, othersReacts, commentId, react } = props;
+  const { myReacts, othersReacts, commentId, react, claimIsMine } = props;
   const [activeChannel] = usePersistedState('comment-channel');
 
   const getCountForReact = type => {
@@ -40,7 +40,7 @@ export default function CommentReactions(props: Props) {
         })}
         disabled={!activeChannel}
         onClick={() => react(commentId, REACTION_TYPES.LIKE)}
-        label={getCountForReact(REACTION_TYPES.LIKE)}
+        label={<span className="comment__reaction-count">{getCountForReact(REACTION_TYPES.LIKE)}</span>}
       />
       <Button
         requiresAuth={IS_WEB}
@@ -51,8 +51,22 @@ export default function CommentReactions(props: Props) {
         })}
         disabled={!activeChannel}
         onClick={() => react(commentId, REACTION_TYPES.DISLIKE)}
-        label={getCountForReact(REACTION_TYPES.DISLIKE)}
+        label={<span className="comment__reaction-count">{getCountForReact(REACTION_TYPES.DISLIKE)}</span>}
       />
+      {claimIsMine && (
+        <Button
+          iconOnly
+          requiresAuth={IS_WEB}
+          title={__('Creator love')}
+          icon={ICONS.SUBSCRIBE}
+          className={classnames('comment__action', {
+            'comment__action--active': myReacts && myReacts.includes(REACTION_TYPES.CREATOR_LIKE),
+          })}
+          disabled={!activeChannel}
+          onClick={() => react(commentId, REACTION_TYPES.CREATOR_LIKE)}
+        />
+      )}
+      {!claimIsMine && getCountForReact(REACTION_TYPES.CREATOR_LIKE) > 0 && <span>creator liked this</span>}
     </>
   );
 }
