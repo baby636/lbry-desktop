@@ -254,12 +254,8 @@ $thumbnailWidthSmall: 0rem;
   display: flex;
   margin-top: var(--spacing-s);
 
-  > *:not(:last-child) {
+  > *:not(:last-of-type) {
     margin-right: var(--spacing-m);
-  }
-
-  .comment__reaction-count {
-    // margin-left: var(--spacing-xxs);
   }
 
   .button__label {
@@ -313,4 +309,10 @@ $thumbnailWidthSmall: 0rem;
 
 .comment__more-below {
   margin-top: var(--spacing-l);
+}
+
+.comment__creator-like {
+  height: 1.1rem;
+  width: 1.1rem;
+  margin-left: var(--spacing-xxs);
 }

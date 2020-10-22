@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Comment from './view';
-import { makeSelectClaimIsMine } from 'lbry-redux';
+import { makeSelectClaimIsMine, makeSelectClaimForUri } from 'lbry-redux';
 import {
   makeSelectMyReactionsForComment,
   makeSelectOthersReactionsForComment,
@@ -9,6 +9,7 @@ import {
 import { doCommentReact } from 'redux/actions/comments';
 
 const select = (state, props) => ({
+  claim: makeSelectClaimForUri(props.uri)(state),
   claimIsMine: makeSelectClaimIsMine(props.uri)(state),
   myReacts: makeSelectMyReactionsForComment(props.commentId)(state),
   othersReacts: makeSelectOthersReactionsForComment(props.commentId)(state),
