@@ -8,11 +8,8 @@ import analytics from 'analytics';
 import SearchPage from './view';
 
 const select = state => {
-  const showMature = makeSelectClientSetting(SETTINGS.SHOW_MATURE)(state);
-  const query = makeSelectQueryWithOptions(
-    null,
-    showMature === false ? { nsfw: false, isBackgroundSearch: false } : { isBackgroundSearch: false }
-  )(state);
+  //   const showMature = makeSelectClientSetting(SETTINGS.SHOW_MATURE)(state);
+  const query = makeSelectQueryWithOptions(null, { nsfw: false, isBackgroundSearch: false })(state);
   const uris = makeSelectSearchUris(query)(state);
 
   return {
