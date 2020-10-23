@@ -101,7 +101,7 @@ export default function SearchPage(props: Props) {
       <section className="search">
         {urlQuery && (
           <Fragment>
-            {isValid && (
+            {false && isValid && (
               <header className="search__header">
                 <div className="claim-preview__actions--header">
                   <ClaimUri uri={uriFromQuery} noShortUrl />
