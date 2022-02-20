@@ -99,7 +99,7 @@
     "css-doodle": "^0.7.1",
     "css-loader": "^2.1.0",
     "cssnano": "^4.1.10",
-    "dat.gui": "^0.7.2",
+    "dat.gui": "^0.7.8",
     "decompress": "^4.2.1",
     "del": "^3.0.0",
     "devtron": "^1.4.0",
