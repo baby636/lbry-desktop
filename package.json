@@ -42,7 +42,9 @@
     "preinstall": "yarn cache clean lbry-redux && yarn cache clean lbryinc",
     "postinstall": "cd web && yarn && cd .. && if-env NODE_ENV=production && yarn postinstall:warning || if-env APP_ENV=web && echo 'Done installing deps' || yarn postinstall:electron",
     "postinstall:electron": "electron-builder install-app-deps && node ./build/downloadDaemon.js && node ./build/downloadLBRYFirst.js",
-    "postinstall:warning": "echo '\n\nWARNING\n\nNot all node modules were installed because NODE_ENV is set to \"production\".\nThis should only be set after installing dependencies with \"yarn\". The app will not work.\n\n'"
+    "postinstall:warning": "echo '\n\nWARNING\n\nNot all node modules were installed because NODE_ENV is set to \"production\".\nThis should only be set after installing dependencies with \"yarn\". The app will not work.\n\n'",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "auto-launch": "^5.0.5",
@@ -54,7 +56,8 @@
     "if-env": "^1.0.4",
     "remark-breaks": "^1.0.5",
     "tempy": "^0.6.0",
-    "videojs-logo": "^2.0.0"
+    "videojs-logo": "^2.0.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -223,5 +226,6 @@
     "LBRYFirstUrlTemplate": "https://github.com/lbryio/lbry-first/releases/download/vLBRYFIRSTVER/lbry-first_OSNAME_amd64.zip",
     "LBRYFirstDir": "static/lbry-first",
     "LBRYFirstFileName": "lbry-first"
-  }
+  },
+  "snyk": true
 }
