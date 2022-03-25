@@ -1,0 +1,90 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.22.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - '@babel/register > lodash':
+        patched: '2022-03-25T23:25:02.437Z'
+    - concurrently > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - webpack-merge > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - eslint > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - eslint-import-resolver-webpack > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - eslint-plugin-flowtype > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - lint-staged > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - node-sass > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - redux > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - webpack-bundle-analyzer > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - '@babel/preset-env > @babel/plugin-transform-block-scoping > lodash':
+        patched: '2022-03-25T23:25:02.437Z'
+    - babel-eslint > @babel/traverse > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - '@exponent/electron-cookies > tough-cookie-web-storage-store > lodash':
+        patched: '2022-03-25T23:25:02.437Z'
+    - babel-plugin-transform-imports > babel-types > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - electron-webpack > css-hot-loader > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - electron-webpack > html-webpack-plugin > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - webpack-dev-server > http-proxy-middleware > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - electron-webpack > webpack-merge > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - eslint > inquirer > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - eslint > table > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - flow-typed > table > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - flow-typed > flowgen > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - node-sass > sass-graph > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - '@babel/preset-env > @babel/plugin-transform-modules-umd > @babel/helper-module-transforms > lodash':
+        patched: '2022-03-25T23:25:02.437Z'
+    - babel-eslint > @babel/traverse > @babel/generator > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - electron > @electron/get > global-tunnel-ng > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - electron-webpack > webpack-dev-server > http-proxy-middleware > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - webpack-dev-server > portfinder > async > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - node-sass > gaze > globule > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - '@babel/preset-env > @babel/plugin-transform-unicode-regex > @babel/helper-create-regexp-features-plugin > @babel/helper-regex > lodash':
+        patched: '2022-03-25T23:25:02.437Z'
+    - babel-eslint > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - electron-webpack > electron-webpack-js > babel-plugin-component > @babel/helper-module-imports > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - electron-webpack > webpack-dev-server > portfinder > async > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - '@babel/preset-env > @babel/preset-modules > @babel/plugin-transform-dotall-regex > @babel/helper-create-regexp-features-plugin > @babel/helper-regex > lodash':
+        patched: '2022-03-25T23:25:02.437Z'
+    - babel-eslint > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - electron-webpack > electron-webpack-js > @babel/preset-env > @babel/preset-modules > @babel/types > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - electron-webpack > electron-webpack-js > babel-plugin-component > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - '@babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/generator > lodash':
+        patched: '2022-03-25T23:25:02.437Z'
+    - '@babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2022-03-25T23:25:02.437Z'
+    - electron-webpack > electron-webpack-js > @babel/preset-env > @babel/preset-modules > @babel/plugin-transform-dotall-regex > @babel/helper-create-regexp-features-plugin > @babel/helper-regex > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
+    - '@babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2022-03-25T23:25:02.437Z'
+    - electron-webpack > electron-webpack-js > @babel/preset-env > @babel/preset-modules > @babel/plugin-transform-dotall-regex > @babel/helper-create-regexp-features-plugin > @babel/helper-annotate-as-pure > @babel/types > lodash:
+        patched: '2022-03-25T23:25:02.437Z'
