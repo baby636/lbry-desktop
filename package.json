@@ -195,7 +195,7 @@
     "unist-util-visit": "^1.4.1",
     "uuid": "^8.3.0",
     "video.js": "7.8.4",
-    "videojs-event-tracking": "^1.0.1",
+    "videojs-event-tracking": "^1.0.3",
     "villain-react": "^1.0.9",
     "wavesurfer.js": "^2.2.1",
     "webpack": "^4.28.4",
